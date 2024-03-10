@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/models/catalog.dart';
 import 'package:flutter_learning/widgets/drawer.dart';
+import 'package:flutter_learning/widgets/item_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,10 +18,11 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.deepPurple,
       ),
-      body: const Center(
-        child: Text(
-          'welcome in 30 days in flutter by $name',
-        ),
+      body: ListView.builder(
+        itemCount: CatalogModel.items.length,
+        itemBuilder: (context, index) {
+          return  ItemWidget(item:CatalogModel.items[index] ,);
+        },
       ),
       drawer: const MyDrawer(),
     );
