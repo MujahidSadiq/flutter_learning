@@ -13,10 +13,11 @@ class HomePage extends StatelessWidget {
         title: const Text(
           'MY App',
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.deepPurple,
       ),
       body: const Center(
-        child: Text('welcome in 30 days in flutter by $name',
+        child: Text(
+          'welcome in 30 days in flutter by $name',
         ),
       ),
       drawer: const MyDrawer(),

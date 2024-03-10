@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.deepPurple,
         ),
         home: MaterialApp(
+          debugShowCheckedModeBanner: false,
           initialRoute: MyRoutes.homeRoute,
           routes: {
             '/': (context) => const HomePage(),
